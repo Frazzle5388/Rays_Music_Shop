@@ -11,7 +11,7 @@ public class GuitarTest {
 
     @Before
     public void before() {
-        guitar = new Guitar("String", "Wood", 500.00, 5);
+        guitar = new Guitar("String", "Wood", 500.00, 750, 5);
     }
 
     @Test
@@ -30,6 +30,11 @@ public class GuitarTest {
     }
 
     @Test
+    public void hasSellingPrice() {
+        assertEquals(750.00, guitar.getSellingPrice(), 0.00);
+    }
+
+    @Test
     public void hasNumberOfStrings() {
         assertEquals(5, guitar.getNumberOfStrings());
     }
@@ -38,6 +43,6 @@ public class GuitarTest {
     public void instrumentMakesSound() {assertEquals("Pluck", guitar.playInstrument());}
 
     @Test
-    public void sellingPriceCalculatedCorrectly() {assertEquals(625.00, guitar.sellItem(), 0.00);}
+    public void markUpCalculatedCorrectly() {assertEquals(250.00, guitar.calculateMarkUp(), 0.00);}
 
 }

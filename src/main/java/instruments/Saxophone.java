@@ -6,8 +6,8 @@ public class Saxophone extends Instrument implements IPlay {
 
     private int numberOfReeds;
 
-    public Saxophone(String type, String material, double buyingPrice, int numberOfReeds) {
-        super(type, material, buyingPrice);
+    public Saxophone(String type, String material, double buyingPrice, double sellingPrice, int numberOfReeds) {
+        super(type, material, buyingPrice, sellingPrice);
         this.numberOfReeds = numberOfReeds;
     }
 
