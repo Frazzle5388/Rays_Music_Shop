@@ -33,4 +33,10 @@ public class PianoTest {
     public void hasNumberOfPedals() {
         assertEquals(2, piano.getNumberOfPedals());
     }
+
+    @Test
+    public void instrumentMakesSound() {assertEquals("Piano sound", piano.playInstrument());}
+
+    @Test
+    public void sellingPriceCalculatedCorrectly() {assertEquals(3750.00, piano.sellItem(), 0.00);}
 }

@@ -33,4 +33,11 @@ public class GuitarTest {
     public void hasNumberOfStrings() {
         assertEquals(5, guitar.getNumberOfStrings());
     }
+
+    @Test
+    public void instrumentMakesSound() {assertEquals("Pluck", guitar.playInstrument());}
+
+    @Test
+    public void sellingPriceCalculatedCorrectly() {assertEquals(625.00, guitar.sellItem(), 0.00);}
+
 }

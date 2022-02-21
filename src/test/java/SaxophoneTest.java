@@ -32,4 +32,10 @@ public class SaxophoneTest {
     public void hasNumberOfReeds() {
         assertEquals(1, saxophone.getNumberOfReeds());
     }
+
+    @Test
+    public void instrumentMakesSound() {assertEquals("Doo Doo Doo", saxophone.playInstrument());}
+
+    @Test
+    public void sellingPriceCalculatedCorrectly() {assertEquals(1375.00, saxophone.sellItem(), 0.00);}
 }
